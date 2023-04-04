@@ -112,6 +112,9 @@ nav{
     align-items: center;
     justify-content: center;
     text-align: center;
+    width: 100%;
+    min-height: 100vh;
+    padding: 50px 8%;
   }
   
   .box {
