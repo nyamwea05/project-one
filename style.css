@@ -111,11 +111,12 @@ nav{
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
   }
   
   .box {
     width: 1250px;
-    height: 600px;
+    height: 500px;
     background-color: white;
     border-radius: 10px;
     box-shadow: 0px 0px 10px 5px rgba(255, 136, 0, 0.8);
@@ -149,9 +150,156 @@ nav{
   }
 }
 
+.Load-more{
+  display: inline-block;
+  margin-top: 50px;
+  background-color: black;
+  padding: 20px 50px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #f0f0f0;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 15px;
+}
 
 
+footer {
+  background-color: #f7f7f7;
+  padding: 50px 0;
+  font-size: 16px;
+  line-height: 0,2;
+  color: #666;
+  font-family: Arial, sans-serif;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  height: 0.1in;
+  z-index: 9999;
+}
 
+.footer-container {
+  max-width: px;
+  margin: 5 auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  height: 10%;
+  padding: 0 1rem;
+}
+
+
+h3 {
+  background-color: transparent;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.footer-links,
+.footer-info,
+.footer-social {
+  flex-basis: 20%;
+  margin-bottom: 30px;
+}
+
+.footer-links h3,
+.footer-info h3,
+.footer-social h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.footer-links ul,
+.footer-social ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li,
+.footer-social li {
+  margin-bottom: 80px;
+}
+
+.footer-links a,
+.footer-social a {
+  color:#f0f0f0
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.footer-links a:hover,
+.footer-social a:hover {
+  color:#F9A03F or;
+}
+
+.footer-info p {
+  margin-bottom: 1000px;
+}
+
+.footer-copy {
+  background-color: #eeeeee00;
+  text-align: center;
+  padding: 10px;
+}
+
+.footer-copy p {
+  margin:0 ;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-wrap: wrap;
+    justify-content:
+
+    
+   
+    #yolo {
+      font-family: 'Brush Script MT', cursive;
+      font-size: 24px;
+      font-weight: 100;
+      letter-spacing: 2px;
+      text-align: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+    }
+    
+    .butterfly {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 20px;
+      width: 20px;
+      background-color: pink;
+      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    }
+
+    .images{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+  }
+  
+  .images img {
+    width: 30%;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.3);
+  }
     
 
 

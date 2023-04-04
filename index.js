@@ -7,28 +7,39 @@ icon.addEventListener('click', () => {
   ul.classList.toggle('active');
 });
 
-const container = document.querySelector('.image-container');
+const apiKey = "87VMkGUJW5HqTzaej1rnh4zUkTyfWJ6ZKIp40iTT0yU5tIORyXdVSaPG";
+const endpoint = "https://api.pexels.com/v1/search?query=nature&per_page=12";
+const imagesContainer = document.querySelector(".images");
 
-fetch('https://api.unsplash.com/photos/random?count=10', {
-    headers: {
-        Authorization: 'Client-ID your-access-key-here'
+async function getImages() {
+    try {
+      const response = await fetch(endpoint, {
+        headers: {
+          Authorization: apiKey,
+        },
+        mode: 'cors'
+      });
+      const data = await response.json();
+      const images = data.photos;
+      images.forEach((image) => {
+        const img = document.createElement("img");
+        img.src = image.src.large;
+        imagesContainer.appendChild(img);
+      });
+    } catch (error) {
+      console.log(error);
     }
-})
-.then(response => response.json())
-.then(data => {
-    data.forEach(item => {
-        const img = document.createElement('img');
-        img.src = item.urls.regular;
-        img.alt = item.alt_description;
-        container.appendChild(img);
-        
-        // Add event listener to make images interactive
-        img.addEventListener('click', () => {
-            // Your code for what happens when image is clicked
-            img.classList.toggle('selected');
-        });
-    });
-})
-.catch(error => {
-    console.log(error);
-});
+  }
+  
+  getImages();
+
+
+$('a[href^="#"]').on('click', function(event) {
+    var target = $(this.getAttribute('href'));
+    if (target.length) {
+      event.preventDefault();
+      $('html, body').stop().animate({
+        scrollTop: target.offset().top
+      }, 1000);
+    }
+  });
