@@ -78,33 +78,14 @@ nav{
     display: flex;
   }
 
-
   body {
-    background: linear-gradient(to right, #2D3142, #4F5D75);
-    background-size: 800% 800%;
-    animation: gradient 10s ease infinite;
-    color: #F2F2F2;
-  }
-  
-  @keyframes gradient {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
-  
-  .pattern {
-    background-image: url('pattern-dark.png');
-    background-repeat: repeat;
-    background-size: auto;
-    background-color: #242D3E;
+    background: #202020;
+    color: #f0f0f0;
+    font-family: "Montserrat", sans-serif;
   }
 
+
+  
   
 .heading {
     position: absolute;
@@ -154,12 +135,18 @@ nav{
 }
 
 @keyframes moveBox {
-    0% {
-        transform: translate(-100%, -100%);
-    }
-    100% {
-        transform: translate(0, 0);
-    }
+  0% {
+    transform: translate(-100%, -100%);
+    background-color: #f0f0f0;
+  }
+  50% {
+    transform: translate(0, 0);
+    background-color: #404040;
+  }
+  100% {
+    transform: translate(0, 0);
+    background-color: #f0f0f0;
+  }
 }
 
 
