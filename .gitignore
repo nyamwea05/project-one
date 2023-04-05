@@ -1,3 +1,113 @@
 node_modules
 
-   
+    <div class="item">
+          <a href="#">
+            <img src="./images/pexels-photo-236339.jpeg" alt="images">
+            <h6>Photographer Name</h6>
+          </a>
+      </div>
+    <ul>
+
+
+      div class="item">
+          <a href="#">
+            <img src="./images/pexels-photo-236339.jpeg" alt="images">
+            <h6>Photographer Name</h6>
+          </a>
+      </div>
+
+
+
+      div class="item">
+          <a href="#">
+            <img src="./images/pexels-photo-236339.jpeg" alt="images">
+            <h6>Photographer Name</h6>
+          </a>
+      </div>
+
+
+      div class="item">
+          <a href="#">
+            <img src="./images/pexels-photo-236339.jpeg" alt="images">
+            <h6>Photographer Name</h6>
+          </a>
+      </div>
+
+
+      div class="item">
+          <a href="#">
+            <img src="./images/pexels-photo-236339.jpeg" alt="images">
+            <h6>Photographer Name</h6>
+          </a>
+      </div>
+
+
+      .Load-more{
+  display: flex;
+  margin-top: 50px;
+  margin: 50px auto;
+  background-color: black;
+  padding: 20px 40px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #f0f0f0;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 20px;
+  left: 19;
+  right: ;
+  position: relative;
+  bottom: 0.1cm;
+  top: 5cm ;
+  transform: translateX(-560%);
+  width: 50%;
+  align-items: center;
+  justify-content: center
+
+}
+
+
+ .search-section {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 400px;
+  position: absolute;
+  top: 520px;
+  right: 20px;
+}
+
+.search-section input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+}
+
+.search-section i {
+  padding: 10px;
+  font-size: 20px;
+  color: #777;
+} 
+
+ .images{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+  }
+  
+  .images img {
+    width: 30%;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.3);
+  }
