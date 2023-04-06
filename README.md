@@ -2,7 +2,7 @@
 
 Project Title
 
-                                                      My Awesome Project.
+                                             My Awesome Project.
 
 Description
 
@@ -14,7 +14,7 @@ The website enables users to:
 
 1 . Outlook the list of images. 2 . Click on a image to view more details. 3 . refresh to see a new array of pictures. 4 . search for specific  images .
 
-     Dependencies.mov
+     Dependencies.
 The  application, Vision Board, allows users to copy images  only.
 
     Code Framework;
