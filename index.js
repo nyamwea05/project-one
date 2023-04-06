@@ -10,22 +10,22 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 const imagePlaceholder = document.getElementsByClassName("box");
 
-// Add's an event listener to the icon element to toggle the class 'active' on the ul element
-// icon.addEventListener("click", () => {
-//   ul.classList.toggle("active");
-// });
+const images = document.querySelectorAll('.gallery img');
+
+images.forEach(image => {
+  image.addEventListener('click', () => {
+    // Remove the 'active' class from all images
+    images.forEach(image => {
+      image.classList.remove('active');
+    });
+
+    // Add the 'active' class to the clicked image
+    image.classList.add('active');
+  });
+});
 
 //
 
-function catchButterfly() {
-  console.log("about to fetch a butterfly");
-  fetch(`https://api.pexels.com/v1/search?query=${query}`)
-    .then((response) => response.blob())
-    .then(displayBlobAsImage(blob))
-    .catch((error) => {
-      console.error("Failed to catch the butterfly:", error);
-    });
-}
 
 /*.catch(error) => {
   console.log('error!');
@@ -33,7 +33,7 @@ function catchButterfly() {
 
 })''*/
 function firstImage() {
-  fetch("https://api.pexels.com/v1/search?query=Ocean", {
+  fetch("https://picsum.photos/200/300", {
     headers: {
       Authorization: "87VMkGUJW5HqTzaej1rnh4zUkTyfWJ6ZKIp40iTT0yU5tIORyXdVSaPG",
     },
@@ -71,3 +71,4 @@ function firstImage() {
       console.log(err);
     });
 }
+const searchImage = document.createElement("search");

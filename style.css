@@ -1,8 +1,11 @@
 *{
+  
     padding: 0;
-    margin: o;
+    margin: 0;
     box-sizing: border-box;
 }
+
+/*...styles the view port ...*/
 body{
     background-color:#F9A03F;
     height: 100vh;
@@ -11,6 +14,8 @@ body{
     justify-content: center;
     align-items: center;
 }
+
+
 ul{
     background-color:grey;
     border-radius: 4px;
@@ -25,13 +30,17 @@ ul{
     font-size: 18px;
     font-weight: bold;
 }
+
+
+/*...styles the anchor elements ...*/
 li a{ 
     display: inline-block;
     padding: 10px 20px;
     text-decoration:none;
     color: black;
-    font-family: 'Dancing Script', cursive;
     font-family: 'Pacifico', cursive;
+    font-family: 'Dancing Script','Pacifico';
+    font-family: 'Pacifico';
     font-weight: 400;
     font-size: 32px;
     text-transform:lowercase;
@@ -39,6 +48,9 @@ li a{
 li:hover a {
     color: rgba(255, 136, 0, 0.986);
 }
+
+
+/*... styles a navigation element...*/
 nav{
     position: absolute;
     top: 0;
@@ -49,25 +61,36 @@ nav{
     margin-bottom: 10px; 
  }
 
-.icon{
-    position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+
+ /*...styles the icon element...*/
+ ion-icon {
+  font-family: 'Material Symbols Outlined';
+  font-size: 1.5rem;
+  color: #333;
+  margin-left: -30px; /* adjust this value to position the icon */
+}
+
+
+/*...styles the input element...*/
+input[type="text"] {
+  border: none;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 5px;
+}
+
+input[type="text"]::before {
+  content: "";
+  display: block;
+  width: 3rem;
+  height: 2px;
+  background-color: #ccc;
+  position: absolute;
+  top: -12px;
   right: 0;
-  height: 60px;
-  border-radius: 50%;
-  background-color: rgba(240, 255, 255, 0.938);
-  background-image: url("https://images.pexels.com/photos/2081128/pexels-photo-2081128.jpeg?auto=compress&cs=tinysrgb&w=1600");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 50%;
-  cursor: pointer;
-  box-shadow: 0px 0px 17px 0px rgba(128, 0, 128, 0.932);
-  transition: 0.4s ease transform;
-} 
- 
+}
 
 
+/*...style to make it responsive...*/
 @media screen and (max-width: 800px){
     ul{
       display: none;
@@ -79,6 +102,7 @@ nav{
   }
 
   body {
+    background-image: url("https://picsum.photos/200/300");
     background: #202020;
     color: #f0f0f0;
     font-family: "Montserrat", sans-serif;
@@ -86,7 +110,7 @@ nav{
 
 
   
-  
+ /*...style's the heading of the web page...*/ 
 .heading {
     position: absolute;
     top: 100px; 
@@ -117,15 +141,19 @@ nav{
     padding: 50px 8%;
   }
   
+
+  /*...styles the animation line...*/
   .box {
     width: 1250px;
-    height: 500px;
+    height: 0px;
     background-color: white;
     border-radius: 10px;
     box-shadow: 0px 0px 10px 5px rgba(255, 136, 0, 0.8);
     animation: moveBox 2s ease-in-out;
     animation-fill-mode: forwards;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
     justify-content: center;
     align-items: center;
     font-size: 2rem;
@@ -138,6 +166,47 @@ nav{
     transform: translate(-50%, -50%);
 }
 
+
+/*...style's the images...*/
+.images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-shadow: 0 0 10px 5px rgba(255, 136, 0, 0.8);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+
+img:hover {
+  box-shadow: 0 0 20px 10px rgba(255, 136, 0, 1);
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  
+}
+
+.gallery img {
+  flex: 1 1 200px; 
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-shadow: 0 0 10px 5px rgba(255, 136, 0, 0.8);
+  transition: box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.gallery img.active {
+  box-shadow: 0 0 20px 10px rgba(255, 136, 0, 1);
+}
+ 
+
+
+/*...style's the animation feature of the line above the photos...*/
 @keyframes moveBox {
   0% {
     transform: translate(-100%, -100%);
@@ -154,32 +223,7 @@ nav{
 }
 
 
-
-.Load-more{
-  display: flex;
-  margin-top: 50px;
-  margin: 50px auto;
-  background-color: black;
-  padding: 20px 40px;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #f0f0f0;
-  font-weight: 500;
-  cursor: pointer;
-  font-size: 20px;
-  left: 19;
-  right: ;
-  position: relative;
-  bottom: 0.1cm;
-  top: 5cm ;
-  transform: translateX(-560%);
-  width: 50%;
-  align-items: center;
-  justify-content: center;
-
-}
-
-
+/*...style's the bottom part of the web...*/
 footer {
   background-color: #f7f7f7;
   padding: 50px 0;
@@ -272,29 +316,40 @@ h3 {
 @media (max-width: 768px) {
   .footer-container {
     flex-wrap: wrap;
-    justify-content:
+    justify-content: 'center'
+  }
 
-    .yolo-container {
+  
+  /*...style's the arabic words...*/
+  .YOLO-container {
       display: flex;
-      justify-content: center;
+      justify-content: flex-end; /* align to the right */
       align-items: center;
-      height: 100vh;
-      background-color: black;
-      position: absolute;
-      left: 0;
-      top: 0;
-     width: 50%;
+      height: 100vh; /* set a height to the container */
+      background-color: #111; /* add a background color */
+      margin-left: auto; /* move container to the right */
     }
     
     .glow-text {
-      font-family: 'Brush Script MT', cursive;
-      font-size: 5vw;
-      font-weight: 100;
-      letter-spacing: 2px;
-      text-align: center;
-      color: white;
-      text-shadow: 0 0 10px rgba(255, 136, 0, 0.8);
-      animation: dance 2s infinite ease-in-out;
+      font-size: 5rem;
+      color: #fff;
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+      animation: glow 1s ease-in-out infinite alternate;
+    }
+    
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+      }
+      to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 50px #ff00de, 0 0 80px #ff00de, 0 0 90px #ff00de, 0 0 110px #ff00de, 0 0 160px #ff00de;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .glow-text {
+        font-size: 2rem;
+      }
     }
     
     @keyframes dance {
@@ -314,37 +369,36 @@ h3 {
         transform: rotateZ(0);
       }
     }
-    
-  
 
-
-  .search-section {
-    display: flex;
-    align-items: center;
-    margin: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    overflow: hidden;
-    width: 100%;
-    max-width: 400px;
-    position: absolute;
-    top: 1.7in; /* moved down by 1.7 inches */
-    left: 100px; /* moved towards the left by 1 inch */
+    /*...styles the icon on the search box...*/
+    form {
+      margin-top: 30px;
+      width: 80%;
+      max-width: 300px;
+      position: relative;
+    }
+    input {
+      border: none;
+      border-bottom: 2px solid rgba(128, 128, 128, 0.479);
+      font-size: 20px;
+      width: 100%;
+      outline: none;
+      color: gray;
+      background-color: transparent;
+    }
+    input::placeholder {
+      opacity: 0.5;
+      color: gray;
+      font-family: "Montserrat";
+    }
+    form ion-icon {
+      position: absolute;
+      right: 0;
+      font-size: 20px;
+      opacity: 0.5;
+      color: gray;
+    }
   }
-  
-  .search-section input {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border: none;
-    outline: none;
-  }
-  
-  .search-section i {
-    padding: 10px;
-    font-size: 20px;
-    color: #777;
-  } 
 
 @media (max-width: 768px) {
   .search-section {
