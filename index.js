@@ -8,6 +8,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
   firstImage();
 });
 
+
+
+
+
 const imagePlaceholder = document.getElementsByClassName("box");
 
 const images = document.querySelectorAll('.gallery img');
@@ -27,11 +31,10 @@ images.forEach(image => {
 //
 
 
-/*.catch(error) => {
-  console.log('error!');
-  console.error(error);
 
-})''*/
+
+
+/*...fetch data from the API..*/
 function firstImage() {
   fetch("https://picsum.photos/200/300", {
     headers: {
@@ -59,16 +62,26 @@ function firstImage() {
         // console.log(myImage);
       }
 
-      // const photos = data.photos;
-      // const images = document.createElement("img");
-      // myImage.appendChild(images);
-      // console.log(myImage.appendChild(images));
-      // images.textContent = images.src.original;
-      // myImage.appendChild(images);
-      // console.log(images.src.next_page);
+      // to get any error from the API
     })
     .catch((err) => {
       console.log(err);
     });
 }
-const searchImage = document.createElement("search");
+
+//makes the search button effective
+const searchBtn = document.querySelector('ion-icon[name="search-outline"]');
+const Images = document.querySelectorAll('.gallery img');
+
+searchBtn.addEventListener('click', () => {
+  const searchText = document.querySelector('input[type="text"]').value.toLowerCase();
+
+  Images.forEach((img) => {
+    const altText = img.getAttribute('alt').toLowerCase();
+    if (altText.includes(searchText)) {
+      img.style.display = 'block';
+    } else {
+      img.style.display = 'none';
+    }
+  });
+});
